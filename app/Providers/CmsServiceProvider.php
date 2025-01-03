@@ -118,19 +118,15 @@ class CmsServiceProvider extends XotBaseServiceProvider
     {
         // $prefix=$this->module_name.'::';
         $prefix = '';
+
         /*
-        LivewireService::registerComponents(
-            base_path('Themes/'.$this->xot->pub_theme.'/Http/Livewire'),
-            'Themes\\'.$this->xot->pub_theme,
-            $prefix,
-        );
-        */
         app(RegisterLivewireComponentsAction::class)
             ->execute(
                 base_path('Themes/'.$this->xot->pub_theme.'/Http/Livewire'),
                 'Themes\\'.$this->xot->pub_theme,
                 $prefix,
             );
+        */
     }
 
     /**
