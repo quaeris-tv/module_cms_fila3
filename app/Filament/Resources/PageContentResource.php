@@ -31,9 +31,9 @@ class PageContentResource extends XotBaseResource
         return ['it', 'en'];
     }
 
-    public static function form(Form $form): Form
+    public static function getFormSchema(): array
     {
-        return $form->schema([
+        return [
             Forms\Components\Grid::make()->columns(2)->schema([
                 Forms\Components\TextInput::make('name')
                     ->columnSpan(1)
@@ -58,7 +58,7 @@ class PageContentResource extends XotBaseResource
                     // ->required()
                     ->columnSpanFull(),
             ]),
-        ]);
+        ];
     }
 
     public static function getRelations(): array

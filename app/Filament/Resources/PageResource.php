@@ -29,9 +29,9 @@ class PageResource extends XotBaseResource
         return ['it', 'en'];
     }
 
-    public static function form(Form $form): Form
+    public static function getFormSchema(): array
     {
-        return $form->schema([
+        return [
             Forms\Components\Grid::make()
                 ->columns(2)
                 ->schema([
@@ -76,7 +76,7 @@ class PageResource extends XotBaseResource
                         // ->required()
                         ->columnSpanFull(),
                 ]),
-        ]);
+        ];
     }
 
     public static function getPages(): array
